@@ -8,18 +8,17 @@
     mc:Ignorable="d">
 
     <Grid Background="Black">
+        <Image HorizontalAlignment="Left" Height="650" Margin="1477,454,0,-24" Width="424" Source="ms-appx:///Resources/Character/20110208173532.png" Opacity="0.8"/>
         <StackPanel>
             <TextBlock x:Name="LabelTime" Text="10:30" FontSize="130" Margin="21,0,0,0" Foreground="White"/>
-            <StackPanel Margin="30,0,0,0" Orientation="Horizontal">
+            <StackPanel Margin="30,0,0,0" Orientation="Horizontal" >
                 <TextBlock x:Name="LabelWeekDay" Text="Tue" FontSize="60" Margin="0,0,20,0"  Foreground="White"/>
-                <Image x:Name="ImgWeather" Height="100" RenderTransformOrigin="0.5,0.5" Width="100">
-                    <Image.RenderTransform>
-                        <CompositeTransform ScaleX="-1"/>
-                    </Image.RenderTransform>
-                </Image>
+                <Image x:Name="ImgWeather"  Height="60" RenderTransformOrigin="0.5,0.5" Width="100" Source="ms-appx:///Resources/Cloudy.png"/>
+                <Image x:Name="ImgNextweather" Height="30" Width="30" Source="ms-appx:///Resources/Cloudy_Sun.png"/>
             </StackPanel>
+            
         </StackPanel>
-        <CalendarView HorizontalAlignment="Right" Margin="0,26,25,0" VerticalAlignment="Top" Height="373" Foreground="#CCFFFFFF" PressedForeground="White" SelectedForeground="White" CalendarItemForeground="White" BlackoutForeground="#66FFFFFF" OutOfScopeForeground="White" Background="Black" OutOfScopeBackground="#FF3E3E3E" CalendarItemBackground="Black" SelectedBorderBrush="#FF7F00D7" CalendarIdentifier="GregorianCalendar">
+        <CalendarView HorizontalAlignment="Right" Margin="0,26,25,0" VerticalAlignment="Top" Height="373" Foreground="#CCFFFFFF" PressedForeground="White" SelectedForeground="White" CalendarItemForeground="White" BlackoutForeground="#66FFFFFF" OutOfScopeForeground="White" Background="Black" OutOfScopeBackground="#FF3E3E3E" CalendarItemBackground="Black" SelectedBorderBrush="#FF7F00D7" CalendarIdentifier="GregorianCalendar" Width="338">
             <CalendarView.SelectedPressedBorderBrush>
                 <SolidColorBrush Color="#FF7F00D7" Opacity="0.699999988079071"/>
             </CalendarView.SelectedPressedBorderBrush>
@@ -27,6 +26,35 @@
                 <SolidColorBrush Color="#FF7F00D7" Opacity="0.60000002384185791"/>
             </CalendarView.SelectedHoverBorderBrush>
         </CalendarView>
-        <StackPanel HorizontalAlignment="Left" Height="394" Margin="18,670,0,0" VerticalAlignment="Top" Width="475"/>
+        <StackPanel HorizontalAlignment="Left" Height="271" Margin="18,793,0,0" VerticalAlignment="Top" Width="475">
+            <StackPanel Orientation="Horizontal" Height="66">
+                <Image Source="ms-appx:///Resources/facebook.png"/>
+                <StackPanel>
+                    <TextBlock Text="Facebook Notification" Foreground="White"/>
+                    <TextBlock Text="김연준님이 회원님의 게시물에 댓글을 남겼습니다." Foreground="White"/>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Height="66">
+                <Image Source="ms-appx:///Resources/twitter.png"/>
+                <StackPanel>
+                    <TextBlock Text="Twitter Notification" Foreground="White"/>
+                    <TextBlock Text="김연준님이 회원님의 게시물에 댓글을 남겼습니다." Foreground="White"/>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Height="66">
+                <Image Source="ms-appx:///Resources/speach_bubble.png"/>
+                <StackPanel>
+                    <TextBlock Text="KakaoTalk Notification" Foreground="White"/>
+                    <TextBlock Text="김연준 : 섹스" Foreground="White"/>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Height="66">
+                <Image Source="ms-appx:///Resources/windows.png"/>
+                <StackPanel>
+                    <TextBlock Text="Windows Notification" Foreground="White"/>
+                    <TextBlock Text="김연준님이 회원님의 게시물에 댓글을 남겼습니다." Foreground="White"/>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Page>

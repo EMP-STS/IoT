@@ -28,6 +28,7 @@ namespace IoTExample
         {
             this.InitializeComponent();
             LabelTime.Text = DateTime.Now.ToString("hh:mm");
+            LabelWeekDay.Text = DateTime.Now.ToString("ddd");
             Timer.Tick += Timer_Tick;
             Timer.Interval = new TimeSpan(0, 0, 1);
             Timer.Start();
@@ -37,6 +38,7 @@ namespace IoTExample
         private void Timer_Tick(object sender, object e)
         {
             LabelTime.Text = DateTime.Now.ToString("hh:mm");
+            LabelWeekDay.Text = DateTime.Now.ToString("ddd");
         }
     }
 }

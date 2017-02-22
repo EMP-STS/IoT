@@ -120,11 +120,13 @@
     <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
     <Content Include="Assets\StoreLogo.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+    <Content Include="Resources\Character\20110208173532.png" />
     <Content Include="Resources\Cloudy.png" />
     <Content Include="Resources\Cloudy_Moon.png" />
     <Content Include="Resources\Cloudy_Sun.png" />
     <Content Include="Resources\Cloudy_Sunny.png" />
     <Content Include="Resources\Comet_Sighted.png" />
+    <Content Include="Resources\facebook.png" />
     <Content Include="Resources\Fog.png" />
     <Content Include="Resources\Foggy_Hard_Cloudy.png" />
     <Content Include="Resources\Foggy_Hard_Sun.png" />
@@ -145,11 +147,14 @@
     <Content Include="Resources\Shower.png" />
     <Content Include="Resources\Shower_Night.png" />
     <Content Include="Resources\Snow.png" />
+    <Content Include="Resources\speach_bubble.png" />
     <Content Include="Resources\Sun.png" />
     <Content Include="Resources\Sunny.png" />
     <Content Include="Resources\Sunrise_and_ Sunset.png" />
     <Content Include="Resources\Thunder.png" />
     <Content Include="Resources\Total_Solar_Eclipse.png" />
+    <Content Include="Resources\twitter.png" />
+    <Content Include="Resources\windows.png" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
