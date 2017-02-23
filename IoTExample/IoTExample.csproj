@@ -142,6 +142,7 @@
     <Content Include="Resources\Moon.png" />
     <Content Include="Resources\Moonrise_and_Moonset.png" />
     <Content Include="Resources\Partial_Solar_Eclipse.png" />
+    <Content Include="Resources\pie.png" />
     <Content Include="Resources\Rainy.png" />
     <Content Include="Resources\Rainy_Weak.png" />
     <Content Include="Resources\Rainy_Windy.png" />
