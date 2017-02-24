@@ -97,7 +97,8 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Classes\Notification.cs" />
-    <Compile Include="Classes\WeatherClass.cs" />
+    <Compile Include="Classes\Weather.cs" />
+    <Compile Include="Classes\WeatherRSS.cs" />
     <Compile Include="View\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>

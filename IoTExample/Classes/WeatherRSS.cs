@@ -1,33 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using Windows.Data.Xml.Dom;
 using Windows.UI.Popups;
 
 namespace IoTExample.Classes
 {
-    partial class WeatherClass
-    {
-        /// <summary>
-        /// 날씨를 표시하기 위한 형식
-        /// </summary>
-        public enum Weather
-        {
-            Clear,
-            PartlyCloudy,
-            MostlyCloudy,
-            MostlyCloudyRainy,
-            MostlyCloudySnowy,
-            Cloudy,
-            CloudyRainy,
-            CloudySnowy
-        }
-    }
     class WeatherRSS
     {
         public async static void GetWeather()
