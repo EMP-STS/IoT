@@ -32,7 +32,7 @@ namespace IoTExample
             Timer.Tick += Timer_Tick;
             Timer.Interval = new TimeSpan(0, 0, 1);
             Timer.Start();
-
+            Classes.WeatherRSS.GetWeather();
         }
 
         private void Timer_Tick(object sender, object e)

@@ -123,6 +123,12 @@
     <Content Include="Assets\StoreLogo.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
     <Content Include="Resources\Character\20110208173532.png" />
+    <Content Include="Resources\Character\beautiful-smile-girl.jpg" />
+    <Content Include="Resources\Character\KakaoTalk_20160416_180126358.jpg" />
+    <Content Include="Resources\Character\KakaoTalk_20160416_180126952.jpg" />
+    <Content Include="Resources\Character\KakaoTalk_20160515_210209332.jpg" />
+    <Content Include="Resources\Character\KakaoTalk_20160519_220016832.jpg" />
+    <Content Include="Resources\Character\KakaoTalk_20160605_102017739.jpg" />
     <Content Include="Resources\Cloudy.png" />
     <Content Include="Resources\Cloudy_Moon.png" />
     <Content Include="Resources\Cloudy_Sun.png" />
