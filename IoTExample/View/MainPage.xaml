@@ -69,6 +69,6 @@
             <TextBlock FontFamily="Assets/Spoqa.ttf" Margin="20,0,0,0" Text="What time is it now?" Foreground="White" FontSize="36" VerticalAlignment="Center" HorizontalAlignment="Center" />
             <TextBlock FontFamily="Assets/Spoqa.ttf" Margin="20,0,0,0" Text="it's High noon" Foreground="White" FontSize="36" VerticalAlignment="Center" HorizontalAlignment="Center" />
         </StackPanel>
-        <Image HorizontalAlignment="Left" Margin="1557,570,0,10" Width="338"/>
+        <Image HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,30,30" Height="500" Width="338"/>
     </Grid>
 </Page>
