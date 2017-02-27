@@ -8,15 +8,16 @@
     mc:Ignorable="d" Loaded="Page_Loaded">
 
     <Grid Background="Black">
-        <StackPanel>
-            <TextBlock x:Name="LabelTime" Text="10:30" FontFamily="Assets/Spoqa.ttf" FontSize="130" Margin="21,0,0,0" Foreground="White" />
-            <StackPanel Margin="30,0,0,0" Padding="0,-20,0,0">
-                <TextBlock x:Name="LabelWeekDay" FontFamily="Assets/Spoqa.ttf" Text="2017-MM-dd(Tue)" FontSize="60" Margin="6,0,20,0"  Foreground="White"/>
-                <StackPanel HorizontalAlignment="Left" Padding="-10,0,0,0" Width="160" Orientation="Horizontal">
+        <StackPanel Height="399" VerticalAlignment="Top">
+            <TextBlock x:Name="LabelWeekDay" Margin="30,20,0,-10"  FontFamily="Assets/Spoqa.ttf" Text="2017-MM-dd, Tue" FontSize="60" Foreground="White"/>
+            <StackPanel Orientation="Vertical">
+                <TextBlock x:Name="LabelTime" Text="10:30" FontFamily="Assets/Spoqa.ttf" FontSize="170" Margin="21,0,0,0" Foreground="White" />
+                <StackPanel HorizontalAlignment="Left" Margin="40,-20,0,0" Width="164" Orientation="Horizontal" Height="87">
                     <Image x:Name="ImgWeather" Height="100" RenderTransformOrigin="0.5,0.5" Width="100" Source="ms-appx:///Resources/Weather/Cloudy.png"/>
-                    <Image x:Name="ImgNextweather" Width="60" Source="ms-appx:///Resources/Weather/Cloudy_Sun.png" VerticalAlignment="Bottom" Margin="0,0,0,10"/>
+                    <Image x:Name="ImgNextweather" Width="60" Source="ms-appx:///Resources/Weather/Cloudy_Sun.png" VerticalAlignment="Bottom" Margin="0,0,0,0"/>
                 </StackPanel>
             </StackPanel>
+            
         </StackPanel>
         <CalendarView HorizontalAlignment="Right" Margin="0,26,25,0" VerticalAlignment="Top" Height="373" Foreground="#CCFFFFFF" PressedForeground="White" SelectedForeground="White" CalendarItemForeground="White" BlackoutForeground="#66FFFFFF" OutOfScopeForeground="White" Background="Black" OutOfScopeBackground="#FF3E3E3E" CalendarItemBackground="Black" SelectedBorderBrush="#FF7F00D7" CalendarIdentifier="GregorianCalendar" Width="338">
             <CalendarView.SelectedPressedBorderBrush>

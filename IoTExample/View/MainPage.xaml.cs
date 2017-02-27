@@ -29,7 +29,7 @@ namespace IoTExample
             this.InitializeComponent();
             WeatherRSS.GetWeather();
             LabelTime.Text = DateTime.Now.ToString("hh:mm");
-            LabelWeekDay.Text = DateTime.Now.ToString("yyyy-MM-dd(ddd)");
+            LabelWeekDay.Text = DateTime.Now.ToString("yyyy-MM-dd, ddd");
             Timer.Tick += Timer_Tick;
             Timer.Interval = new TimeSpan(0, 0, 1);
             Timer.Start();
@@ -39,7 +39,7 @@ namespace IoTExample
         private void Timer_Tick(object sender, object e)
         {
             LabelTime.Text = DateTime.Now.ToString("hh:mm");
-            LabelWeekDay.Text = DateTime.Now.ToString("yyyy-MM-dd(ddd)");
+            LabelWeekDay.Text = DateTime.Now.ToString("yyyy-MM-dd, ddd");
             ImgWeather.Source = WeatherRSS.GetWeatherName(WeatherRSS.FForecast);
         }
 
