@@ -12,7 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-
+using IoTExample.Classes;
 // 빈 페이지 항목 템플릿에 대한 설명은 https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x412에 나와 있습니다.
 
 namespace IoTExample
@@ -27,18 +27,25 @@ namespace IoTExample
         public MainPage()
         {
             this.InitializeComponent();
+            WeatherRSS.GetWeather();
             LabelTime.Text = DateTime.Now.ToString("hh:mm");
-            LabelWeekDay.Text = DateTime.Now.ToString("ddd");
+            LabelWeekDay.Text = DateTime.Now.ToString("yyyy-MM-dd(ddd)");
             Timer.Tick += Timer_Tick;
             Timer.Interval = new TimeSpan(0, 0, 1);
             Timer.Start();
-            Classes.WeatherRSS.GetWeather();
+            
         }
 
         private void Timer_Tick(object sender, object e)
         {
             LabelTime.Text = DateTime.Now.ToString("hh:mm");
-            LabelWeekDay.Text = DateTime.Now.ToString("ddd");
+            LabelWeekDay.Text = DateTime.Now.ToString("yyyy-MM-dd(ddd)");
+            ImgWeather.Source = WeatherRSS.GetWeatherName(WeatherRSS.FForecast);
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            ImgWeather.Source = WeatherRSS.GetWeatherName(WeatherRSS.FForecast);
         }
     }
 }

@@ -8,10 +8,9 @@ namespace IoTExample.Classes
 {
     class Notification
     {
+        public void FacebookNotification()
+        {
 
-    }
-    class NotificationManager
-    {
-
+        }
     }
 }

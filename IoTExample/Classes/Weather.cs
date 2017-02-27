@@ -8,12 +8,13 @@ namespace IoTExample.Classes
     public enum Weather
     {
         Clear,
-        PartlyCloudy,
-        MostlyCloudy,
+        Cloudy_Sunny,
+        Cloudy_Sun,
         MostlyCloudyRainy,
-        MostlyCloudySnowy,
         Cloudy,
         CloudyRainy,
-        CloudySnowy
+        CloudySnowy,
+        Rainy,
+        Snow
     }
 }
