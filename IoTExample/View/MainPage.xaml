@@ -9,12 +9,12 @@
 
     <Grid Background="Black">
         <StackPanel>
-            <TextBlock x:Name="LabelTime" Text="10:30" FontSize="130" Margin="21,0,0,0" Foreground="White" />
+            <TextBlock x:Name="LabelTime" Text="10:30" FontFamily="Assets/Spoqa.ttf" FontSize="130" Margin="21,0,0,0" Foreground="White" />
             <StackPanel Margin="30,0,0,0" Padding="0,-20,0,0">
-                <TextBlock x:Name="LabelWeekDay" Text="2017-MM-dd(Tue)" FontSize="60" Margin="6,0,20,0"  Foreground="White"/>
+                <TextBlock x:Name="LabelWeekDay" FontFamily="Assets/Spoqa.ttf" Text="2017-MM-dd(Tue)" FontSize="60" Margin="6,0,20,0"  Foreground="White"/>
                 <StackPanel HorizontalAlignment="Left" Padding="-10,0,0,0" Width="160" Orientation="Horizontal">
-                    <Image x:Name="ImgWeather" Height="60" RenderTransformOrigin="0.5,0.5" Width="100" Source="ms-appx:///Resources/Weather/Cloudy.png"/>
-                    <Image x:Name="ImgNextweather" Height="40" Width="40" Source="ms-appx:///Resources/Weather/Cloudy_Sun.png" VerticalAlignment="Bottom" Margin="0,0,0,10"/>
+                    <Image x:Name="ImgWeather" Height="100" RenderTransformOrigin="0.5,0.5" Width="100" Source="ms-appx:///Resources/Weather/Cloudy.png"/>
+                    <Image x:Name="ImgNextweather" Width="60" Source="ms-appx:///Resources/Weather/Cloudy_Sun.png" VerticalAlignment="Bottom" Margin="0,0,0,10"/>
                 </StackPanel>
             </StackPanel>
         </StackPanel>
@@ -65,8 +65,8 @@
             </ListViewItem>
         </ListView>
         <StackPanel Opacity="100" Orientation="Vertical" VerticalAlignment="Bottom" Margin="0,0,0,50" Width="500" Height="100" HorizontalAlignment="Center">
-            <TextBlock Margin="20,0,0,0" Text="What time is it now?" Foreground="White" FontSize="36" VerticalAlignment="Center" HorizontalAlignment="Center" />
-            <TextBlock Margin="20,0,0,0" Text="it's High noon" Foreground="White" FontSize="36" VerticalAlignment="Center" HorizontalAlignment="Center" />
+            <TextBlock FontFamily="Assets/Spoqa.ttf" Margin="20,0,0,0" Text="What time is it now?" Foreground="White" FontSize="36" VerticalAlignment="Center" HorizontalAlignment="Center" />
+            <TextBlock FontFamily="Assets/Spoqa.ttf" Margin="20,0,0,0" Text="it's High noon" Foreground="White" FontSize="36" VerticalAlignment="Center" HorizontalAlignment="Center" />
         </StackPanel>
         <Image HorizontalAlignment="Left" Margin="1557,570,0,10" Width="338"/>
     </Grid>
