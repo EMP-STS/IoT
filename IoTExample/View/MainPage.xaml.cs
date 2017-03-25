@@ -33,6 +33,8 @@ namespace IoTExample
         public bool _isPreviewing;
         public DisplayRequest _displayRequest;
         public DispatcherTimer Timer = new DispatcherTimer();
+        MusicLoader _musicLoader = new MusicLoader();
+        
         public MainPage()
         {
             this.InitializeComponent();
@@ -43,6 +45,7 @@ namespace IoTExample
             Timer.Interval = new TimeSpan(0, 0, 1);
             Timer.Start();
             StartCapture();
+            
         }
 
         public async void StartCapture()
@@ -60,6 +63,7 @@ namespace IoTExample
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             ImgWeather.Source = WeatherRSS.GetWeatherName(WeatherRSS.FForecast);
+            _musicLoader.Load_MusicAsync();
         }
 
         private async Task StartPreviewAsync()

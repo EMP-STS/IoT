@@ -8,7 +8,6 @@
     mc:Ignorable="d" Loaded="Page_Loaded">
 
     <Grid>
-        
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
@@ -17,7 +16,7 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <CaptureElement Name="PreviewControl" Stretch="UniformToFill" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+        <CaptureElement Name="PreviewControl" Stretch="UniformToFill" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
         <StackPanel Height="399" VerticalAlignment="Top" Grid.ColumnSpan="2">
             <TextBlock x:Name="LabelWeekDay" Margin="30,20,0,-10"  FontFamily="Assets/Spoqa.ttf" Text="2017-MM-dd, Tue" FontSize="40" Foreground="White"/>
             <StackPanel Orientation="Vertical">
