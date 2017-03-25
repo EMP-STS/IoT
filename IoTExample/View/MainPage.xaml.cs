@@ -18,6 +18,9 @@ using Windows.ApplicationModel;
 using Windows.System.Display;
 using System.Threading.Tasks;
 using Windows.Graphics.Display;
+using Windows.Media.SpeechSynthesis;
+using Windows.ApplicationModel.Resources.Core;
+using System.Diagnostics;
 
 // 빈 페이지 항목 템플릿에 대한 설명은 https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x412에 나와 있습니다.
 
@@ -34,18 +37,28 @@ namespace IoTExample
         public DisplayRequest _displayRequest;
         public DispatcherTimer Timer = new DispatcherTimer();
         MusicLoader _musicLoader = new MusicLoader();
-
+        private SpeechSynthesizer synthesizer;
+        private ResourceContext speechContext;
+        private ResourceMap speechResourceMap;
         public MainPage()
         {
             this.InitializeComponent();
             WeatherRSS.GetWeather();
+            synthesizer = new SpeechSynthesizer();
             LabelTime.Text = DateTime.Now.ToString("hh:mm");
             LabelWeekDay.Text = DateTime.Now.ToString("yyyy-MM-dd, ddd");
             Timer.Tick += Timer_Tick;
             Timer.Interval = new TimeSpan(0, 0, 1);
             Timer.Start();
             StartCapture();
-
+            var voices = SpeechSynthesizer.AllVoices;
+            foreach (var voice in voices)
+            {
+                if (voice.Language == "ko-KR")
+                {
+                    synthesizer.Voice = voice;
+                }
+            }
         }
 
         public async void StartCapture()
@@ -99,10 +112,24 @@ namespace IoTExample
                 string[] Parsed_Order = order.Split(' ');
                 int cnt = 0;
                 string returnValue = "";
+
+                try
+                {
+                    SpeechSynthesisStream synthesisStream = await synthesizer.SynthesizeTextToStreamAsync(textBox.Text);
+
+                    // Set the source and start playing the synthesized audio stream.
+                    media.AutoPlay = true;
+                    media.SetSource(synthesisStream, synthesisStream.ContentType);
+                    media.Play();
+                }
+                catch (Exception)
+                {
+
+                }
                 textBox.Text = "";
                 if (order.Contains("노래"))
                 {
-                    
+
                     foreach (var music in MusicLoader.MusicDB)
                     {
                         if (cnt <= 10)
