@@ -23,7 +23,7 @@ using Windows.Graphics.Display;
 
 namespace IoTExample
 {
-    
+
     /// <summary>
     /// 자체적으로 사용하거나 프레임 내에서 탐색할 수 있는 빈 페이지입니다.
     /// </summary>
@@ -34,7 +34,7 @@ namespace IoTExample
         public DisplayRequest _displayRequest;
         public DispatcherTimer Timer = new DispatcherTimer();
         MusicLoader _musicLoader = new MusicLoader();
-        
+
         public MainPage()
         {
             this.InitializeComponent();
@@ -45,7 +45,7 @@ namespace IoTExample
             Timer.Interval = new TimeSpan(0, 0, 1);
             Timer.Start();
             StartCapture();
-            
+
         }
 
         public async void StartCapture()
@@ -96,21 +96,31 @@ namespace IoTExample
             if (e.Key == Windows.System.VirtualKey.Enter)
             {
                 string order = textBox.Text;
+                string[] Parsed_Order = order.Split(' ');
                 int cnt = 0;
                 string returnValue = "";
                 textBox.Text = "";
                 if (order.Contains("노래"))
                 {
+                    
                     foreach (var music in MusicLoader.MusicDB)
                     {
-                        if (music.Emotion.Contains("밝게"))
+                        if (cnt <= 10)
                         {
-                            cnt++;
-                            returnValue += $" {music.Title} - {music.Singer}, {music.Emotion} \r\n";
+                            if (music.Emotion.Contains(Parsed_Order[0]))
+                            {
+                                cnt++;
+                                returnValue += $" {music.Title} - {music.Singer}, {music.Emotion} \r\n";
+                            }
+                        }
+                        else
+                        {
+                            break;
                         }
                     }
                 }
-                ContentDialog c = new ContentDialog() {
+                ContentDialog c = new ContentDialog()
+                {
                     Content = returnValue
                 };
                 await c.ShowAsync();
