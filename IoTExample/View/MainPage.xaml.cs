@@ -90,5 +90,31 @@ namespace IoTExample
                 System.Diagnostics.Debug.WriteLine("MediaCapture initialization failed. {0}", ex.Message);
             }
         }
+
+        private async void TextBox_KeyUp(object sender, KeyRoutedEventArgs e)
+        {
+            if (e.Key == Windows.System.VirtualKey.Enter)
+            {
+                string order = textBox.Text;
+                int cnt = 0;
+                string returnValue = "";
+                textBox.Text = "";
+                if (order.Contains("노래"))
+                {
+                    foreach (var music in MusicLoader.MusicDB)
+                    {
+                        if (music.Emotion.Contains("밝게"))
+                        {
+                            cnt++;
+                            returnValue += $" {music.Title} - {music.Singer}, {music.Emotion} \r\n";
+                        }
+                    }
+                }
+                ContentDialog c = new ContentDialog() {
+                    Content = returnValue
+                };
+                await c.ShowAsync();
+            }
+        }
     }
 }

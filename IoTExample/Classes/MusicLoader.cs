@@ -11,7 +11,7 @@ namespace IoTExample.Classes
 {
     class MusicLoader
     {
-        public static List<Music> MusicDB { get; set; }
+        public static List<Music> MusicDB = new List<Music> { };
         /// <summary>
         /// Initialize시 한번 호출하면 됨
         /// </summary>
@@ -36,6 +36,7 @@ namespace IoTExample.Classes
                             Genre = temp[4],
                             Emotion = temp[5]
                         };
+                        MusicDB.Add(m);
                     }
                 }
             }
