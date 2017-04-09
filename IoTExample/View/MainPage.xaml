@@ -17,67 +17,82 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <CaptureElement Name="PreviewControl" Stretch="UniformToFill" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
-        <StackPanel Height="399" VerticalAlignment="Top" Grid.ColumnSpan="2">
-            <TextBlock x:Name="LabelWeekDay" Margin="30,20,0,-10"  FontFamily="Assets/Spoqa.ttf" Text="2017-MM-dd, Tue" FontSize="40" Foreground="White"/>
+        <StackPanel VerticalAlignment="Top" Margin="30,20,0,0">
             <StackPanel Orientation="Vertical">
-                <TextBlock x:Name="LabelTime" Text="10:30" FontFamily="Assets/Spoqa.ttf" FontSize="120" Margin="10,-5,0,0" Foreground="White" />
-                <StackPanel HorizontalAlignment="Left" Margin="30,-10,0,0" Width="164" Orientation="Horizontal" Height="87">
-                    <Image x:Name="ImgWeather" Height="100" RenderTransformOrigin="0.5,0.5" Width="100" Source="ms-appx:///Resources/Weather/Cloudy.png"/>
-                    <Image x:Name="ImgNextweather" Width="60" Source="ms-appx:///Resources/Weather/Cloudy_Sun.png" VerticalAlignment="Bottom" Margin="0,0,0,0"/>
+                <TextBlock x:Name="LabelTime" Text="10:30" FontFamily="Assets/Spoqa.ttf" FontSize="120" Margin="10,0,0,0" Foreground="White" />
+                <TextBlock x:Name="LabelWeekDay" Margin="30,-15,0,10"  FontFamily="Assets/Spoqa.ttf" Text="4월 5일 수요일" FontSize="40" Foreground="White"/>
+                <StackPanel HorizontalAlignment="Left" Margin="30,0,0,0" Width="164" Orientation="Horizontal" >
+                    <Image x:Name="ImgWeather" Height="100" RenderTransformOrigin="0.5,0.5" Width="100" Stretch="Uniform" Source="ms-appx:///Resources/Weather/Sunny.png"/>
+                    <TextBlock x:Name="WeatherText" Margin="15,5,0,0" Foreground="White" FontSize="26" Text="맑음&#x0a;19도" />
                 </StackPanel>
             </StackPanel>
         </StackPanel>
-        <CalendarView HorizontalAlignment="Right" Margin="0,26,25,0" VerticalAlignment="Top" Height="335" Foreground="#CCFFFFFF" PressedForeground="White" SelectedForeground="White" CalendarItemForeground="White" BlackoutForeground="#66FFFFFF" OutOfScopeForeground="White" Background="Black" OutOfScopeBackground="#FF3E3E3E" CalendarItemBackground="Black" SelectedBorderBrush="#FF7F00D7" CalendarIdentifier="GregorianCalendar" Width="304" Grid.Column="1">
-            <CalendarView.SelectedPressedBorderBrush>
-                <SolidColorBrush Color="#FF7F00D7" Opacity="0.699999988079071"/>
-            </CalendarView.SelectedPressedBorderBrush>
-            <CalendarView.SelectedHoverBorderBrush>
-                <SolidColorBrush Color="#FF7F00D7" Opacity="0.60000002384185791"/>
-            </CalendarView.SelectedHoverBorderBrush>
-        </CalendarView>
-        <ListView Margin="18,0,0,20" Width="314" Height="175" VerticalAlignment="Bottom" HorizontalAlignment="Left" ScrollViewer.VerticalScrollBarVisibility="Visible" ScrollViewer.VerticalScrollMode="Enabled" Grid.Row="1" Background="#66000000">
-            <ListViewItem>
-                <StackPanel Orientation="Horizontal">
-                    <Image Source="ms-appx:///Resources/facebook.png" Width="40"/>
-                    <StackPanel>
-                        <TextBlock Text="Facebook Notification" Foreground="White" />
-                        <TextBlock Text="회원님의 게시물이 등록되었습니다." Foreground="White" />
-                    </StackPanel>
-                </StackPanel>
-            </ListViewItem>
-            <ListViewItem>
-                <StackPanel Orientation="Horizontal">
-                    <Image Source="ms-appx:///Resources/facebook.png" Width="40"/>
-                    <StackPanel>
-                        <TextBlock Text="Facebook Notification" Foreground="White" />
-                        <TextBlock Text="회원님의 게시물이 등록되었습니다." Foreground="White" />
-                    </StackPanel>
-                </StackPanel>
-            </ListViewItem>
-            <ListViewItem>
-                <StackPanel Orientation="Horizontal">
-                    <Image Source="ms-appx:///Resources/facebook.png" Width="40"/>
-                    <StackPanel>
-                        <TextBlock Text="Facebook Notification" Foreground="White" />
-                        <TextBlock Text="회원님의 게시물이 등록되었습니다." Foreground="White" />
-                    </StackPanel>
-                </StackPanel>
-            </ListViewItem>
-            <ListViewItem>
-                <StackPanel Orientation="Horizontal">
-                    <Image Source="ms-appx:///Resources/facebook.png" Width="40"/>
-                    <StackPanel>
-                        <TextBlock Text="Facebook Notification" Foreground="White" />
-                        <TextBlock Text="회원님의 게시물이 등록되었습니다." Foreground="White" />
-                    </StackPanel>
-                </StackPanel>
-            </ListViewItem>
-        </ListView>
-        <StackPanel Opacity="100" Orientation="Vertical" VerticalAlignment="Bottom" Margin="0,0,0,30" Width="500" Height="100" HorizontalAlignment="Center" Grid.Row="1" Grid.ColumnSpan="2">
-            <TextBlock FontFamily="Assets/Spoqa.ttf" Margin="20,0,0,0" Text="What time is it now?" Foreground="White" FontSize="36" VerticalAlignment="Center" HorizontalAlignment="Center" />
-            <TextBox Name="textBox" FontFamily="Assets/Spoqa.ttf" Text="" Foreground="White"  FontSize="36" VerticalAlignment="Center" KeyUp="TextBox_KeyUp" />
+        
+        <StackPanel Margin="0,0,10,10" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Column="1" Grid.Row="1" >
+            <StackPanel Background="#19878787">
+                <TextBlock Text="Facebook 알림" Foreground="White" FontSize="20" Margin="10,5,0,0" />
+                <ListView Margin="0,10,0,0" Width="314" Height="100" VerticalAlignment="Bottom" HorizontalAlignment="Right" ScrollViewer.VerticalScrollBarVisibility="Visible" ScrollViewer.VerticalScrollMode="Enabled" Grid.Column="2" Grid.Row="1">
+                    <ListViewItem>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="ms-appx:///Resources/facebook.png" Width="40"/>
+                            <StackPanel>
+                                <TextBlock Text="Facebook Notification" Foreground="White" />
+                                <TextBlock Text="회원님의 게시물이 등록되었습니다." Foreground="White" />
+                            </StackPanel>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="ms-appx:///Resources/facebook.png" Width="40"/>
+                            <StackPanel>
+                                <TextBlock Text="Facebook Notification" Foreground="White" />
+                                <TextBlock Text="회원님의 게시물이 등록되었습니다." Foreground="White" />
+                            </StackPanel>
+                        </StackPanel>
+                    </ListViewItem>
+                </ListView>
+            </StackPanel>
+            <StackPanel Margin="0,10,0,0" Background="#19878787">
+                <TextBlock Text="Google 알림" Foreground="White" FontSize="20" Margin="10,5,0,0" />
+                <ListView Margin="0,10,0,0" Width="314" Height="100" VerticalAlignment="Bottom" HorizontalAlignment="Right" ScrollViewer.VerticalScrollBarVisibility="Visible" ScrollViewer.VerticalScrollMode="Enabled" Grid.Column="2" Grid.Row="1">
+                    <ListViewItem>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="ms-appx:///Resources/facebook.png" Width="40"/>
+                            <StackPanel>
+                                <TextBlock Text="Facebook Notification" Foreground="White" />
+                                <TextBlock Text="회원님의 게시물이 등록되었습니다." Foreground="White" />
+                            </StackPanel>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="ms-appx:///Resources/facebook.png" Width="40"/>
+                            <StackPanel>
+                                <TextBlock Text="Facebook Notification" Foreground="White" />
+                                <TextBlock Text="회원님의 게시물이 등록되었습니다." Foreground="White" />
+                            </StackPanel>
+                        </StackPanel>
+                    </ListViewItem>
+                </ListView>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Opacity="100" Orientation="Vertical" VerticalAlignment="Bottom" Margin="0,0,0,30" HorizontalAlignment="Center" Grid.Row="1" Grid.ColumnSpan="2">
+            <Image Width="100" Margin="0,0,0,10" Source="ms-appx:///Resources/거울.png" />
+            <TextBlock FontFamily="Assets/Spoqa.ttf" Margin="0,0,0,0" Text="기분이 안 좋으신 당신을 위해 추천드립니다." Foreground="White" FontSize="36" VerticalAlignment="Center" HorizontalAlignment="Center" />
         </StackPanel>
         <MediaElement x:Name="media" AutoPlay="False" />
+        <StackPanel Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Right">
+            <StackPanel Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Right" Width="500" Height="150" Background="#19878787" >
+                <TextBlock Text="추천 노래 목록" Foreground="White" FontSize="30" />
+                <TextBlock Text="fripSide - Only my Railgun" Foreground="White" FontSize="25" />
+                <TextBlock Text="765Pro Allstars - M@STERPIECE" Foreground="White" FontSize="25" />
+            </StackPanel>
+            <StackPanel Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Right" Width="500" Height="150" Margin="0,10,0,0" Background="#19878787">
+                <TextBlock Text="추천 여행지" Foreground="White" FontSize="30"/>
+                <TextBlock Text="마포대교" Foreground="White" FontSize="28"/>
+                <TextBlock Text="서울특별시 여의도동" Foreground="White" FontSize="20"/>
+            </StackPanel>
+        </StackPanel>
         <!--<Image Opacity="0" VerticalAlignment="Bottom" Margin="0,0,25,10" Height="483" Source="ms-appx:///Resources/Character/20110208173532.png" Grid.Column="1" HorizontalAlignment="Right" Width="338" Grid.Row="1"/>
     -->
     </Grid>

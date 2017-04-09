@@ -133,6 +133,11 @@ namespace IoTExample
                         }
                     }
                 }
+                else if (order.Contains("유튜브"))
+                {
+                    WebView1.Navigate(new Uri("https://www.youtube.com/watch?v=" + Parsed_Order[0]));
+                    WebView1.Visibility = Visibility.Visible;
+                }
                 try
                 {
                     SpeechSynthesisStream synthesisStream = await synthesizer.SynthesizeTextToStreamAsync(returnValue);

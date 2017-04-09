@@ -91,6 +91,9 @@
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
     <Content Include="Assets\Spoqa.ttf" />
+    <Content Include="Resources\거울.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
@@ -121,7 +124,9 @@
     <Content Include="Assets\SplashScreen.scale-125.png" />
     <Content Include="Assets\SplashScreen.scale-150.png" />
     <Content Include="Assets\SplashScreen.scale-400.png" />
-    <Content Include="Resources\music.txt" />
+    <Content Include="Resources\music.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -137,41 +142,111 @@
     <Content Include="Resources\Character\KakaoTalk_20160515_210209332.jpg" />
     <Content Include="Resources\Character\KakaoTalk_20160519_220016832.jpg" />
     <Content Include="Resources\Character\KakaoTalk_20160605_102017739.jpg" />
-    <Content Include="Resources\Weather\Cloudy.png" />
-    <Content Include="Resources\Weather\Cloudy_Moon.png" />
-    <Content Include="Resources\Weather\Cloudy_Sun.png" />
-    <Content Include="Resources\Weather\Cloudy_Sunny.png" />
-    <Content Include="Resources\Weather\Comet_Sighted.png" />
-    <Content Include="Resources\facebook.png" />
-    <Content Include="Resources\Weather\Fog.png" />
-    <Content Include="Resources\Weather\Foggy_Hard_Cloudy.png" />
-    <Content Include="Resources\Weather\Foggy_Hard_Sun.png" />
-    <Content Include="Resources\Weather\Foggy_Weak_Cloudy.png" />
-    <Content Include="Resources\Weather\Frost.png" />
-    <Content Include="Resources\Weather\Hard.png" />
-    <Content Include="Resources\Weather\Heat_wave.png" />
-    <Content Include="Resources\Weather\Hurricane.png" />
-    <Content Include="Resources\Weather\Hurricane_Strong.png" />
-    <Content Include="Resources\Weather\Hurricane_SUPER.png" />
-    <Content Include="Resources\Weather\Moon.png" />
-    <Content Include="Resources\Weather\Moonrise_and_Moonset.png" />
-    <Content Include="Resources\Weather\Partial_Solar_Eclipse.png" />
-    <Content Include="Resources\pie.png" />
-    <Content Include="Resources\Weather\Rainy.png" />
-    <Content Include="Resources\Weather\Rainy_Weak.png" />
-    <Content Include="Resources\Weather\Rainy_Windy.png" />
-    <Content Include="Resources\Weather\Rainy_Windy_Thunder_Cloudy.png" />
-    <Content Include="Resources\Weather\Shower.png" />
-    <Content Include="Resources\Weather\Shower_Night.png" />
-    <Content Include="Resources\Weather\Snow.png" />
-    <Content Include="Resources\Weather\speach_bubble.png" />
-    <Content Include="Resources\Weather\Sun.png" />
-    <Content Include="Resources\Weather\Sunny.png" />
-    <Content Include="Resources\Weather\Sunrise_and_ Sunset.png" />
-    <Content Include="Resources\Weather\Thunder.png" />
-    <Content Include="Resources\Weather\Total_Solar_Eclipse.png" />
-    <Content Include="Resources\twitter.png" />
-    <Content Include="Resources\windows.png" />
+    <Content Include="Resources\Weather\Cloudy.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Weather\Cloudy_Moon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Weather\Cloudy_Sun.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Weather\Cloudy_Sunny.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Weather\Comet_Sighted.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\facebook.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Weather\Fog.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Weather\Foggy_Hard_Cloudy.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Weather\Foggy_Hard_Sun.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Weather\Foggy_Weak_Cloudy.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Weather\Frost.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Weather\Hard.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Weather\Heat_wave.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Weather\Hurricane.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Weather\Hurricane_Strong.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Weather\Hurricane_SUPER.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Weather\Moon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Weather\Moonrise_and_Moonset.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Weather\Partial_Solar_Eclipse.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\pie.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Weather\Rainy.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Weather\Rainy_Weak.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Weather\Rainy_Windy.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Weather\Rainy_Windy_Thunder_Cloudy.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Weather\Shower.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Weather\Shower_Night.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Weather\Snow.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Weather\speach_bubble.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Weather\Sun.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Weather\Sunny.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Weather\Sunrise_and_ Sunset.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Weather\Thunder.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Weather\Total_Solar_Eclipse.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\twitter.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\windows.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
